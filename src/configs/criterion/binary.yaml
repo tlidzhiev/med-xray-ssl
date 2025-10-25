@@ -1,0 +1,2 @@
+_target_: src.loss.ce_loss.CrossEntropyLoss
+weight: [0.7071, 1.7070] # computed by BinaryLabelDataset.compute_weights

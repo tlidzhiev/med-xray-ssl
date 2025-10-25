@@ -19,7 +19,7 @@ class ROCAUCMetric(BaseMetric):
             **kwargs,
         ).to(device)
 
-    def update(self, logits: torch.FloatTensor, labels: torch.FloatTensor):
+    def update(self, logits: torch.FloatTensor, labels: torch.FloatTensor, **kwargs):
         with torch.no_grad():
             logits = logits.detach()
             preds = torch.softmax(logits, dim=1)[:, 1]

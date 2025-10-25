@@ -101,7 +101,7 @@ class BinaryLabelDataset(BaseDataset):
 
             index.append({'path': str(save_path), 'label': label})
 
-        # Clean up original Kaggle data
+        kaggle_path = kaggle_path.parent.parent.parent
         if kaggle_path.exists():
             shutil.rmtree(kaggle_path)
             print(f'Cleaned up original Kaggle data at {kaggle_path}')
