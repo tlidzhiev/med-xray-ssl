@@ -1,0 +1,26 @@
+[project]
+name = "med-xray-ssl"
+version = "0.1.0"
+description = "Fine-tuning pretrained SSL models on imbalanced chest X-rays for disease classification and detection"
+readme = "README.md"
+requires-python = "==3.12.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit==4.3.0",
+    "ruff==0.14.3",
+    "ty==0.0.1a26",
+]
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff]
+line-length = 100
