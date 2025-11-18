@@ -1,0 +1,28 @@
+device: auto
+train:
+  - _target_: src.metrics.accuracy.AccuracyMetric
+    name: Accuracy
+    device: ${metrics.device}
+  - _target_: src.metrics.f1.F1Metric
+    name: f1
+    device: ${metrics.device}
+  - _target_: src.metrics.recall.RecallMetric
+    name: recall
+    device: ${metrics.device}
+  - _target_: src.metrics.rocauc.ROCAUCMetric
+    name: rocauc
+    device: ${metrics.device}
+
+inference:
+  - _target_: src.metrics.accuracy.AccuracyMetric
+    name: Accuracy
+    device: ${metrics.device}
+  - _target_: src.metrics.f1.F1Metric
+    name: f1
+    device: ${metrics.device}
+  - _target_: src.metrics.recall.RecallMetric
+    name: recall
+    device: ${metrics.device}
+  - _target_: src.metrics.rocauc.ROCAUCMetric
+    name: rocauc
+    device: ${metrics.device}

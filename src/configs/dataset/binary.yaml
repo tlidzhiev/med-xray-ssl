@@ -1,0 +1,20 @@
+dim: 256
+num_classes: 2
+
+train:
+  _target_: src.dataset.binary.BinaryLabelDataset
+  split: train
+  limit: null
+  shuffle_index: true
+  instance_transforms: ${transforms.instance_transforms.train}
+  force_reindex: false
+  dim: ${dataset.dim}
+
+val:
+  _target_: src.dataset.binary.BinaryLabelDataset
+  split: val
+  limit: null
+  shuffle_index: true
+  instance_transforms: ${transforms.instance_transforms.inference}
+  force_reindex: false
+  dim: ${dataset.dim}

@@ -1,0 +1,11 @@
+train:
+  imgs: # name of the tensor on which we apply transform
+    _target_: torch.nn.Sequential
+    _args_:
+      - _target_: src.transforms.rad_dino.RadDinoTransformer
+
+inference:
+  imgs: # name of the tensor on which we apply transform
+    _target_: torch.nn.Sequential
+    _args_:
+      - _target_: src.transforms.rad_dino.RadDinoTransformer
