@@ -468,7 +468,7 @@ class BaseTrainer:
         parameters = self.model.parameters()
         if isinstance(parameters, torch.Tensor):
             parameters = [parameters]
-        gradients = [p for p in parameters if p.grad is not None]
+        gradients = [p.grad for p in parameters if p.grad is not None]
 
         if len(gradients) == 0:
             return 0.0
