@@ -28,7 +28,6 @@ def main(cfg: DictConfig):
 
     model = instantiate(cfg.model).to(device)
     logger.info(f'Model:\n{model}')
-    model = torch.compile(model)
     optimizer = instantiate(
         cfg.optimizer,
         params=[p for p in model.parameters() if p.requires_grad],
