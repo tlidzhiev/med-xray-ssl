@@ -1,5 +1,5 @@
 _target_: src.logger.wandb.WandBWriter
-project_name: image-generation-papers
+project_name: med-xray-ssl
 run_name: test
 entity: null # your wandb username or team name
 run_id: null # set to resume a specific run
